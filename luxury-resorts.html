@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Resorts - Journey Junction</title>
+
+    <!-- Bootstrap & Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <style>
+      .resort-card {
+        background-color: #e9f1f1;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .resort-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+      .resort-details h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+      .facility-list {
+        list-style: none;
+        padding: 0;
+      }
+      .facility-list li {
+        font-size: 15px;
+        color: #555;
+        padding: 4px 0;
+      }
+    </style>
+
+    <!-- Include jQuery & Owl Carousel JS before </body> -->
+  </head>
+  <body>
+    <section class="resort-section py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Resort Card 1: Wayanad Nature Resort -->
+          <div class="col-lg-4">
+            <div class="resort-card shadow rounded p-3">
+              <div class="owl-carousel resort-slider">
+                <img
+                  src="assets\images\banner\msresort.jpg"
+                  alt="Wayanad Resort 1"
+                />
+                <img
+                  src="assets\images\banner\msresort1.jpg"
+                  alt="Wayanad Resort 2"
+                />
+                <img
+                  src="assets\images\banner\msresort2.jpg"
+                  alt="Wayanad Resort 3"
+                />
+              </div>
+              <div class="resort-details mt-3">
+                <h4>Mountain Shadows</h4>
+                <ul class="facility-list">
+                  <li>🌿 Scenic View</li>
+                  <li>🏊 Pool Access</li>
+                  <li>🍽️ Restaurant & Room Service</li>
+                  <li>📶 Free Wi‑Fi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resort Card 2: Vythiri Hill Retreat -->
+          <div class="col-lg-4">
+            <div class="resort-card shadow rounded p-3">
+              <div class="owl-carousel resort-slider">
+                <img
+                  src="assets\images\banner\cbresort1.jpg"
+                  alt="Vythiri Resort 1"
+                />
+                <img
+                  src="assets\images\banner\cbresort.jpg"
+                  alt="Vythiri Resort 2"
+                />
+                <img
+                  src="assets\images\banner\cbresort3.jpg"
+                  alt="Vythiri Resort 3"
+                />
+              </div>
+              <div class="resort-details mt-3">
+                <h4>Celebrity Pool Villa With Jacuzzi</h4>
+                <ul class="facility-list">
+                  <li>🌄 Hill View</li>
+                  <li>🛏️ Deluxe Rooms</li>
+                  <li>🧘 Spa & Wellness</li>
+                  <li>🚗 Free Parking</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resort Card 3: Meppadi Mist Resort -->
+          <div class="col-lg-4">
+            <div class="resort-card shadow rounded p-3">
+              <div class="owl-carousel resort-slider">
+                <img
+                  src="https://source.unsplash.com/800x600/?mist,resort"
+                  alt="Meppadi Resort 1"
+                />
+                <img
+                  src="https://source.unsplash.com/800x600/?valley,hotel"
+                  alt="Meppadi Resort 2"
+                />
+                <img
+                  src="https://source.unsplash.com/800x600/?campfire,forest"
+                  alt="Meppadi Resort 3"
+                />
+              </div>
+              <div class="resort-details mt-3">
+                <h4>Meppadi Mist Resort</h4>
+                <ul class="facility-list">
+                  <li>🌫️ Misty Valley View</li>
+                  <li>🔥 Campfire & BBQ</li>
+                  <li>👨‍👩‍👧 Family Friendly</li>
+                  <li>📡 Satellite TV</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".resort-slider").owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          dots: true,
+          nav: false,
+        });
+      });
+    </script>
+  </body>
+</html>

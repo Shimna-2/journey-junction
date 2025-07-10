@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from azim.commonsupport.com/Travio/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 May 2025 10:15:23 GMT -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <title>Journey Junction - Find Your Best Destination</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link href="assets/css/font-awesome-all.css" rel="stylesheet" />
+    <link href="assets/css/flaticon.css" rel="stylesheet" />
+    <link href="assets/css/owl.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/nice-select.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/color.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+
+    <style>
+      /* Resorts Section Styling */
+      .resorts-section {
+        margin-top: 100px;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2d3436;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #000000, #333333);
+        border-radius: 2px;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* .resort-card {
+        transition: all 0.4s ease;
+        border: 1px solid #00000021;
+        background-size: cover;
+        background-position: center;
+        color: rgb(0, 0, 0);
+        background: #000;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      } */
+
+      .resort-card {
+        transition: all 0.4s ease;
+        background: rgba(135, 206, 250, 0.15);
+        border: 1px solid rgba(135, 206, 250, 0.3);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 8px 24px rgba(135, 206, 250, 0.2);
+        border-radius: 15px;
+        color: #002b5b;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        transform: translateY(0);
+      }
+
+      .resort-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 12px 30px rgba(135, 206, 250, 0.35);
+        border-color: rgba(135, 206, 250, 0.5);
+      }
+
+      /* Hover effect on text */
+      .resort-card:hover .resort-title {
+        color: #0077c2; /* brighter blue on hover */
+      }
+
+      .resort-card:hover .resort-description {
+        color: #004f9e;
+      }
+
+      /* Icon hover effect */
+      .resort-card:hover .resort-icon {
+        transform: scale(1.2);
+        color: #1a8cff;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      /* Optional overlay for contrast */
+      .card-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.2
+        ); /* slight dark overlay for readability */
+        z-index: 0;
+      }
+
+      /* Ensure card content is on top of overlay */
+      .card-body {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* .resort-icon {
+        font-size: 2rem;
+        color: #fff;
+      } */
+
+      .resort-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #002b5b; /* dark navy blue */
+      }
+
+      .resort-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #003f7d; /* deep sky blue shade */
+      }
+
+      .resort-icon {
+        font-size: 2rem;
+        color: #005f99; /* sky blue-themed icon color */
+      }
+
+      .resort-cta .btn {
+        transition: all 0.3s ease;
+        border-width: 2px;
+      }
+
+      .resort-cta .btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .resort-card:hover {
+        transform: translateY(-10px) scale(1.02);
+      }
+
+      .view-resorts-btn {
+        transition: all 0.3s ease;
+        background: linear-gradient(90deg, #0984e3, #6c5ce7);
+        border: none;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(9, 132, 227, 0.3);
+      }
+
+      .view-resorts-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(9, 132, 227, 0.4);
+        background: linear-gradient(90deg, #0873c9, #5b4bd6);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .section-subtitle {
+          font-size: 1rem;
+        }
+
+        .resort-title {
+          font-size: 1.3rem;
+        }
+
+        .resort-description {
+          font-size: 0.95rem;
+        }
+
+        .view-resorts-btn {
+          font-size: 1rem;
+          padding: 10px 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .resorts-section {
+          padding: 3rem 0;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .resort-card {
+          margin-bottom: 1.5rem;
+        }
+      }
+      .check-out-btn {
+        display: inline-block;
+        background-color: #28a745; /* Bootstrap green */
+        color: #fff;
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: 15px;
+        margin-left: 50px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        width: 130px;
+        text-align: center;
+      }
+
+      .check-out-btn:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+        text-decoration: none;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <!-- page wrapper -->
+
+  <body>
+    <div class="fixed-action-buttons d-flex flex-column align-items-end">
+      <!-- WhatsApp Button -->
+      <!-- Call Button -->
+      <a
+        href="tel:+919633763916"
+        class="btn btn-danger mb-2 action-btn"
+        title="Call"
+      >
+        <i class="bi bi-telephone-fill"></i>
+      </a>
+      <a
+        href="https://wa.me/c/919744161939"
+        target="_blank"
+        class="btn btn-success action-btn"
+        title="WhatsApp Catalogue"
+      >
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="boxed_wrapper">
+      <!-- preloader -->
+      <div class="loader-wrap">
+        <div class="preloader">
+          <div id="handle-preloader" class="handle-preloader">
+            <div class="animation-preloader">
+              <div class="spinner"></div>
+              <img src="assets/images/logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- preloader end -->
+
+      <!-- main header -->
+      <header class="main-header style-one">
+        <!-- header-lower -->
+        <div class="header-lower">
+          <div class="auto-container">
+            <div class="outer-box">
+              <div class="logo-box">
+                <figure class="logo">
+                  <a href="index.html"
+                    ><img src="assets/images/logo.png" alt=""
+                  /></a>
+                </figure>
+              </div>
+              <div class="menu-area clearfix">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler">
+                  <i class="icon-bar"></i>
+                  <i class="icon-bar"></i>
+                  <i class="icon-bar"></i>
+                </div>
+                <nav class="main-menu navbar-expand-md navbar-light">
+                  <div
+                    class="collapse navbar-collapse show clearfix"
+                    id="navbarSupportedContent"
+                  >
+                    <ul class="navigation clearfix">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li class="dropdown">
+                  <a href="resorts.html">Resorts</a>
+                  <ul class="submenu">
+                       <li><a href="honeymoon-resorts.html">Honeymoon Resorts</a></li>
+                    <li><a href="luxury-resorts.html">Luxury Resorts</a></li>
+                    <li><a href="privatepoolvillas.html">Private Pool Villas</a></li>
+                    <li><a href="budget-friendly.html">Budget-Friendly</a></li>
+                  </ul>
+                </li>
+                      <!-- <li><a href="">Gallery</a></li> -->
+                      <li class="dropdown d-block d-lg-none">
+                        <a href="booking.html">Book Now</a>
+                      </li>
+                      <li><a>Blog</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              <ul
+                class="menu-right-content pull-right clearfix d-none d-lg-flex"
+              >
+                <li class="btn-box">
+                  <a href="booking.html" class="theme-btn">Book Now</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--sticky Header-->
+        <div class="sticky-header">
+          <div class="auto-container">
+            <div class="outer-box">
+              <div class="logo-box">
+                <figure class="logo">
+                  <a href="index.html"
+                    ><img src="assets/images/logo.png" alt=""
+                  /></a>
+                </figure>
+              </div>
+              <div class="menu-area">
+                <nav class="main-menu clearfix">
+                  <!--Keep This Empty / Menu will come through Javascript-->
+                </nav>
+              </div>
+
+              <ul class="menu-right-content pull-right clearfix">
+                <li class="btn-box">
+                  <a href="booking.html" class="theme-btn">Book Now</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- main-header end -->
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+
+        <nav class="menu-box">
+          <div class="nav-logo">
+            <a href="index.html"
+              ><img src="assets/images/logo.png" alt="" title=""
+            /></a>
+          </div>
+          <div class="menu-outer">
+            <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+          </div>
+          <div class="contact-info">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <a href="https://wa.me/919744161939" target="_blank"
+                  >WhatsApp: +91 97441 61939</a
+                >
+              </li>
+              <li><a href="tel:+919744161939">Call: +91 97441 61939</a></li>
+              <li>
+                <a href="mailto:hello@journeyjunction.com"
+                  >Email: hello@journeyjunction.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="social-links">
+            <ul class="clearfix">
+              <li>
+                <a
+                  href="https://www.instagram.com/journeyjunction.in"
+                  target="_blank"
+                  ><span class="fab fa-instagram"></span
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/journeyjunctionindia"
+                  target="_blank"
+                  ><span class="fab fa-facebook-square"></span
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- End Mobile Menu -->
+
+      <!-- Page Title -->
+      <section
+        class="page-title centred"
+        style="background-image: url('assets/images/banner/resort.jpg')"
+      >
+        <div class="auto-container">
+          <div class="glass-panel">
+            <div class="content-box">
+              <h1>Resorts</h1>
+              <p>Discover your next Resorts</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End Page Title -->
+
+      <!-- Top Resorts Section -->
+      <!-- Top Resorts Section -->
+      <section class="resorts-section py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title mt-5 mb-4">
+              Explore the Top Resorts in Wayanad
+            </h2>
+            <p class="section-subtitle text-muted">
+              Discover handpicked accommodations for every traveler's dream
+              getaway
+            </p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <!-- Card 1 -->
+            <!-- <div class="col-md-6 mb-5 col-lg-3">
+              <div
+                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
+              >
+                <div class="card-overlay"></div>
+                <div
+                  class="card-body p-4 position-relative z-index-1 text-center"
+                >
+                  <div class="resort-icon mb-3">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <h3 class="resort-title">Best Couple Resorts</h3>
+                  <p class="resort-description">
+                    Private cottages, romantic settings, and perfect views for
+                    couples looking to escape the ordinary.
+                  </p>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Card 2 -->
+            <div class="col-md-6 mb-4 col-lg-3 mb-5 px-3">
+              <!-- <a
+                href="honeymoon-resorts.html"
+                class="text-decoration-none text-dark"
+              > -->
+              <div
+                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
+              >
+                <div class="card-overlay"></div>
+                <div
+                  class="card-body p-4 position-relative z-index-1 text-center"
+                >
+                  <div class="resort-icon mb-3">
+                    <i class="fas fa-ring"></i>
+                  </div>
+                  <h3 class="resort-title">Honeymoon Resorts</h3>
+                  <p class="resort-description">
+                    From candle-lit dinners to private pool villas, our
+                    handpicked resorts create unforgettable moments.
+                  </p>
+                </div>
+              </div>
+              <a href="honeymoon-resorts.html" class="check-out-btn"
+                >Check Out</a
+              >
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 mb-5 col-lg-3">
+              <!-- <a
+                href="luxury-resorts.html"
+                class="text-decoration-none text-dark"
+              > -->
+              <div
+                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
+              >
+                <div class="card-overlay"></div>
+                <div
+                  class="card-body p-4 position-relative z-index-1 text-center"
+                >
+                  <div class="resort-icon mb-3">
+                    <i class="fas fa-crown"></i>
+                  </div>
+                  <h3 class="resort-title">Luxury Resorts</h3>
+                  <p class="resort-description">
+                    Stay in style at the top luxury resorts in Wayanad, offering
+                    modern amenities in scenic settings.
+                  </p>
+                </div>
+              </div>
+              <a href="luxury-resorts.html" class="check-out-btn">Check Out</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 mb-5 col-lg-3">
+              <!-- <a
+                href="privatepoolvillas.html"
+                class="text-decoration-none text-dark"
+              > -->
+              <div
+                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
+              >
+                <div class="card-overlay"></div>
+                <div
+                  class="card-body p-4 position-relative z-index-1 text-center"
+                >
+                  <div class="resort-icon mb-3">
+                    <i class="fas fa-swimming-pool"></i>
+                  </div>
+                  <h3 class="resort-title">Private Pool Villas</h3>
+                  <p class="resort-description">
+                    Enjoy a romantic retreat with your own pool and serene views
+                    of Wayanad's landscapes.
+                  </p>
+                </div>
+              </div>
+              <a href="privatepoolvillas.html" class="check-out-btn"
+                >Check Out</a
+              >
+            </div>
+            <div class="col-md-6 mb-5 col-lg-3">
+              <!-- <a
+                href="budget-friendly-resorts.html"
+                class="text-decoration-none text-dark"
+              > -->
+              <div
+                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
+              >
+                <div class="card-overlay"></div>
+                <div
+                  class="card-body p-4 position-relative z-index-1 text-center"
+                >
+                  <div class="resort-icon mb-3">
+                    <i class="fas fa-wallet"></i>
+                  </div>
+                  <h3 class="resort-title">Budget-Friendly</h3>
+                  <p class="resort-description">
+                    Affordable stays in prime locations — great value without
+                    compromising on experience.
+                  </p>
+                </div>
+              </div>
+              <a href="privatepoolvillas.html" class="check-out-btn"
+                >Check Out</a
+              >
+            </div>
+
+            <!-- Card 5 -->
+            <!-- <div class="col-md-6 mb-5 col-lg-3">
+              <div
+                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
+              >
+                <div class="card-overlay"></div>
+                <div
+                  class="card-body p-4 position-relative z-index-1 text-center"
+                >
+                  <div class="resort-icon mb-3">
+                    <i class="fas fa-umbrella-beach"></i>
+                  </div>
+                  <h3 class="resort-title">Boutique Resorts</h3>
+                  <p class="resort-description">
+                    Unique properties with charm, great for couples and families
+                    looking for something different.
+                  </p>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Card 6 -->
+
+            <!-- Card 7 -->
+            <!-- <div class="col-md-6 mb-5 col-lg-6">
+              <div
+                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
+              >
+                <div class="card-overlay"></div>
+                <div
+                  class="card-body p-4 position-relative z-index-1 text-center"
+                >
+                  <div class="resort-icon mb-3">
+                    <i class="fas fa-map-marked-alt"></i>
+                  </div>
+                  <h3 class="resort-title">Experiential Stays</h3>
+                  <p class="resort-description">
+                    Resorts offering spice farm visits, adventure trails, forest
+                    treks, and immersive Wayanad experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- place-section -->
+     
+      <!-- place-section end -->
+
+      <footer class="main-footer bg-color-2">
+        <div class="footer-top">
+          <div
+            class="vector-bg"
+            style="background-image: url(assets/images/shape/shape-11.png)"
+          ></div>
+          <div class="auto-container">
+            <div class="row clearfix">
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget logo-widget">
+                  <figure class="footer-logo">
+                    <a><img src="assets/images/logo.png" alt="" /></a>
+                  </figure>
+                  <div class="text">
+                    <p>
+                      From private pool villas to cozy cottages, Journey
+                      Junction helps you book the top resorts in Wayanad with
+                      ease.
+                    </p>
+                  </div>
+                  <ul class="social-links clearfix">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/journeyjunctionindia"
+                        target="_blank"
+                        ><i class="fab fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/journeyjunction.in"
+                        target="_blank"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li>
+                      <a><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget links-widget">
+                  <div class="widget-title">
+                    <h3>Resorts</h3>
+                  </div>
+                  <div class="widget-content">
+                    <ul class="links-list clearfix">
+                      <li><a>Couple Resorts</a></li>
+                      <li><a>Honeymoon Resorts</a></li>
+                      <li><a>Budget-Friendly Stays</a></li>
+                      <li><a>Experiential Resorts</a></li>
+                      <li><a>Verified local stays</a></li>
+                      <li><a>Quick WhatsApp booking</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget links-widget">
+                  <div class="widget-title">
+                    <h3>Links</h3>
+                  </div>
+                  <div class="widget-content">
+                    <ul class="links-list clearfix">
+                      <li><a>About Us</a></li>
+                      <li><a>Resorts</a></li>
+                      <li><a>Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget contact-widget">
+                  <div class="widget-title">
+                    <h3>Contacts</h3>
+                  </div>
+                  <div class="text mb-3">
+                    <p>
+                      Whether you’re searching for the top resorts in Wayanad or
+                      planning your honeymoon, our team is ready to help.
+                    </p>
+                  </div>
+                  <div class="widget-content">
+                    <ul class="info-list clearfix">
+                      <li>
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/919744161939" target="_blank"
+                          >+91 97441 61939</a
+                        >
+                      </li>
+                      <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919633763916">+91 96337 63916</a>
+                      </li>
+                      <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:hello@journeyjunction.com"
+                          >hello@journeyjunction.com</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="bottom-inner clearfix">
+                        <div class="copyright pull-left">
+                            <p><a href="index-2.html">Travio</a> &copy; 2021 All Right Reserved</p>
+                        </div>
+                        <ul class="footer-nav pull-right">
+                            <li><a href="index-2.html">Terms of Service</a></li>
+                            <li><a href="index-2.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+      </footer>
+      <!-- main-footer end -->
+
+      <!--Scroll to top-->
+      <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fal fa-angle-up"></span>
+      </button>
+    </div>
+
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

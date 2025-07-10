@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Pool Villas - Journey Junction</title>
+
+    <!-- Bootstrap & Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <style>
+      .resort-card {
+        background-color: #f0faff;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .resort-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+      .resort-details h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1d609c;
+      }
+      .facility-list {
+        list-style: none;
+        padding: 0;
+      }
+      .facility-list li {
+        font-size: 15px;
+        color: #555;
+        padding: 4px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="resort-section py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Resort Card 1 -->
+          <div class="col-lg-4">
+            <div class="resort-card shadow rounded p-3">
+              <div class="owl-carousel resort-slider">
+                <img
+                  src="https://source.unsplash.com/800x600/?privatepool,villa,resort"
+                  alt="Pool Villa 1"
+                />
+                <img
+                  src="https://source.unsplash.com/800x600/?luxury,pool,resort"
+                  alt="Pool Villa 2"
+                />
+                <img
+                  src="https://source.unsplash.com/800x600/?poolside,retreat"
+                  alt="Pool Villa 3"
+                />
+              </div>
+              <div class="resort-details mt-3">
+                <h4>Azure Bliss Pool Villa</h4>
+                <ul class="facility-list">
+                  <li>🏊 Private Pool</li>
+                  <li>🌄 Scenic Balcony Views</li>
+                  <li>🍽️ Candle-lit Dining</li>
+                  <li>🛏️ Luxury Bedding</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resort Card 2 -->
+          <div class="col-lg-4">
+            <div class="resort-card shadow rounded p-3">
+              <div class="owl-carousel resort-slider">
+                <img
+                  src="https://source.unsplash.com/800x600/?villa,resort,water"
+                  alt="Pool Villa 4"
+                />
+                <img
+                  src="https://source.unsplash.com/800x600/?pool,resort,night"
+                  alt="Pool Villa 5"
+                />
+                <img
+                  src="https://source.unsplash.com/800x600/?jacuzzi,villa"
+                  alt="Pool Villa 6"
+                />
+              </div>
+              <div class="resort-details mt-3">
+                <h4>Serenity Pool Retreat</h4>
+                <ul class="facility-list">
+                  <li>🔥 Private Fire Pit</li>
+                  <li>🧘 Spa & Wellness Access</li>
+                  <li>🌌 Night Pool Ambience</li>
+                  <li>🚗 Free Private Parking</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resort Card 3 -->
+          <div class="col-lg-4">
+            <div class="resort-card shadow rounded p-3">
+              <div class="owl-carousel resort-slider">
+                <img
+                  src="https://source.unsplash.com/800x600/?villa,resort,romantic"
+                  alt="Pool Villa 7"
+                />
+                <img
+                  src="https://source.unsplash.com/800x600/?honeymoon,pool,villa"
+                  alt="Pool Villa 8"
+                />
+                <img
+                  src="https://source.unsplash.com/800x600/?nature,villa,pool"
+                  alt="Pool Villa 9"
+                />
+              </div>
+              <div class="resort-details mt-3">
+                <h4>Romantic Bliss Villa</h4>
+                <ul class="facility-list">
+                  <li>🌸 Honeymoon Special Decor</li>
+                  <li>🍷 Mini Bar & Lounge</li>
+                  <li>🏞️ Nature-Inspired Interiors</li>
+                  <li>📶 Wi-Fi & Streaming TV</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".resort-slider").owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          dots: true,
+          nav: false,
+        });
+      });
+    </script>
+  </body>
+</html>
