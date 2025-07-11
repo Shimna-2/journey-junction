@@ -579,25 +579,27 @@
   window.addEventListener("load", function () {
     const sliderImage = document.getElementById("slider-image");
 
-    // const imageSources = [
-    //   "assets/images/banner/imageslider8.jpg",
-    //   "assets/images/banner/imgslider5.jpg",
-    //   "assets/images/banner/imageslider4.jpg",
-    //   "assets/images/banner/imgslider1.jpg",
-    //   "assets/images/banner/imageslider9.jpg",
-    //   "assets/images/banner/imageslider11.jpg",
-    // ];
+    const imageSources = [
+      "assets/images/banner/imageslider8.jpg",
+      "assets/images/banner/imgslider5.jpg",
+      "assets/images/banner/imageslider4.jpg",
+      // "assets/images/banner/imgslider1.jpg",
+      // "assets/images/banner/imageslider9.jpg",
+      // "assets/images/banner/imageslider11.jpg",
+    ];
 
     let currentIndex = 0;
 
     setInterval(() => {
+      // Fade out
       sliderImage.style.opacity = 0;
 
+      // Change image after fade out
       setTimeout(() => {
         currentIndex = (currentIndex + 1) % imageSources.length;
         sliderImage.src = imageSources[currentIndex];
-        sliderImage.style.opacity = 1;
-      }, 500); // Change after fade out
-    }, 3000); // Every 3s
+        sliderImage.style.opacity = 1; // Fade in
+      }, 500);
+    }, 3000);
   });
 })(window.jQuery);

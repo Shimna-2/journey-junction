@@ -46,6 +46,8 @@
     <link href="assets/css/color.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    
+
   </head>
 
   <!-- page wrapper -->
@@ -123,14 +125,31 @@
 
                 <!-- Dropdown -->
                 <li class="dropdown">
-                  <a href="resorts.html">Resorts</a>
-                  <ul class="submenu">
-                       <li><a href="honeymoon-resorts.html">Honeymoon Resorts</a></li>
-                    <li><a href="luxury-resorts.html">Luxury Resorts</a></li>
-                    <li><a href="privatepoolvillas.html">Private Pool Villas</a></li>
-                    <li><a href="budget-friendly.html">Budget-Friendly</a></li>
-                  </ul>
-                </li>
+                        <a href="resorts.html">Resorts</a>
+                        <ul class="submenu">
+                          <li>
+                            <a href="honeymoon-resorts.html"
+                              >Honeymoon Resorts</a
+                            >
+                          </li>
+                          <li>
+                            <a href="luxury-resorts.html">Luxury Resorts</a>
+                          </li>
+                          <li>
+                            <a href="premium-resorts.html">Premium Resorts</a>
+                          </li>
+                          <li>
+                            <a href="privatepoolvillas.html"
+                              >Private Pool Villas</a
+                            >
+                          </li>
+                          <li>
+                            <a href="budget-friendly-resorts.html"
+                              >Budget-Friendly</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
 
                 <li><a href="#">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -256,55 +275,71 @@
       <!-- banner-section end -->
 
       <!-- about-section -->
-    <section class="about-section" style="background-color: #afd4af; padding: 10px 0px;">
+    <section class="about-section" style="background-color:white;">
 
 
        
-        <div class="auto-container" style="background-color: #ffffff; padding: 10px 0px;">
+        <div class="auto-container" style="background-color: #ffffff; padding: 0px 0px;">
           <div class="row clearfix" >
-            <div class="col-lg-6 col-md-12 col-sm-12 image-column" style="background-color: #afd4af;">
+            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
               <div class="image_block_1">
               <div class="image-box" style="padding:1px 0;">
 
                   <div class="shape">
                    
                   </div>
-              <section class="image-slider-section">
+              <section class="image-slider-section" style="max-width: 600px; margin: 20px auto 0; padding: 20px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); background: #ffffff;">
   <img
+    id="slider-image"
     src="assets/images/banner/imageslider11.jpg"
     alt="Slide"
-    style="width: 100%; border-radius: 10px;"
+    style="
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: opacity 0.5s ease-in-out;
+      margin-top: -20px;
+    "
   />
-
-  <!-- Book Now Button -->
   <div style="text-align: center; margin-top: 20px;">
-   <h4 style="
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #2c3e50;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-  margin-top: 20px;
-  margin-bottom: 20px;
-">
-  "Your Dream Stay is Just a Click Away!"
-</h4>
-
-    <a href="booking.html" class="book-now-btn" style="
+    <h4 style="
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #2c3e50;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      margin: 10px 0 0 0;
+    ">
+      "Your Dream Stay is Just a Click Away!"
+    </h4>
+   
+  </div>
+   <a href="booking.html" class="book-now-btn" style="
       display: inline-block;
       background-color:#228B22;
       color: white;
-      padding: 12px 25px;
+      padding: 10px 25px;
+      margin-top: 70px;
+  margin-left: 80px;
+      margin-top: 60px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 0px;
+   
       box-shadow: 0 4p2x 6px rgba(0,0,0,0.2);
       transition: background 0.3s ease;">
       Book Now
     </a>
-  </div>
+  
 </section>
+
+
+
+  <!-- Book Now Button -->
+ 
+
+ 
 
                   <div class="video-content">
                     <!-- <h3>Find Your Best Destination</h3> -->
@@ -312,36 +347,62 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-              <div class="content_block_1">
-                <div class="content-box">
-                  <div class="sec-title">
-                    <!-- <p>About <b>Journey Junction</b></p> -->
-                    <h2>Wayanad's Best Resort Booking</h2>
-                  </div>
-                 <div class="text">
-  <p style="color: #ffffff;">
-    From private pool villas to cozy cottages, Journey
-    Junction helps you book the top resorts in Wayanad with
-    ease.
-  </p>
+        <div class="col-lg-4 col-md-12 col-sm-12 content-column">
+  <div class="content_block_1">
+    <div class="content-box text-center text-lg-start mx-auto" style="margin-top: 20px; margin-bottom: 20px; padding: 20px;">
+      <div class="sec-title mb-3">
+        <h2 style="font-size: 1.8rem;">Wayanad's Best Resort Booking</h2>
+      </div>
+      
+      <div class="text mb-3">
+        <p style="margin-bottom: 15px;">
+          From private pool villas to cozy cottages, <strong>Journey
+          Junction</strong> helps you book the top resorts in Wayanad with ease.
+        </p>
+      </div>
+
+      <ul class="list clearfix text-center text-lg-start" style="padding-left: 0; list-style: none;">
+        <li style="display: flex; align-items: center; gap: 8px;">
+           Best Couple Resorts in Wayanad
+        </li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+          Luxury Honeymoon Resorts
+        </li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+          Budget-Friendly Stays
+        </li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+          Boutique Retreats
+        </li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+           Camping & Cottage Stays
+        </li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+           Experiential Resorts
+        </li>
+        <!-- <li style="display: flex; align-items: center; gap: 8px;">
+           Personalized Wayanad resort recommendations
+        </li> -->
+        <li style="display: flex; align-items: center; gap: 8px;">
+          Quick WhatsApp booking
+        </li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+           Verified local stays
+        </li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+           Exclusive offers
+        </li>
+      </ul>
+
+      <!-- <div class="btn-box mt-4">
+        <a class="theme-btn" href="#" style="padding: 10px 25px; font-weight: 500;">Explore More</a>
+      </div> -->
+    </div>
+  </div>
 </div>
 
-                  <ul class="list clearfix">
-                    <li>Best Couple Resorts in Wayanad</li>
-                    <li>Luxury Honeymoon Resorts</li>
-                    <li>Budget-Friendly Stays</li>
-                    <li>Boutique Retreats</li>
-                    <li>Camping & Cottage Stays</li>
-                    <li>Experiential Resorts</li>
-                    <li>Personalized Wayanad resort recommendations</li>
-                    <li>Quick WhatsApp booking</li>
-                    <li>Verified local stays</li>
-                    <li>Exclusive offers</li>
-                  </ul>
-                  <div class="btn-box">
-                    <a class="theme-btn">Explore More</a>
-                  </div>
+
+
                 </div>
               </div>
             </div>
@@ -351,7 +412,7 @@
     
 
            
-           
+
 
            
 
@@ -499,7 +560,7 @@
     <!-- Destination 1 -->
     <div class="resort-card">
       <img
-        src="assets\images\banner\en-ooru-tribal-heritage.webp"
+        src="assets\images\background\enooru.jpeg"
         alt="Banasura Sagar Dam"
         class="resort-image"
       />
@@ -523,7 +584,7 @@
     </div>
      <div class="resort-card">
       <img
-        src="assets\images\banner\karappuzha-dam-wayanad.webp"
+        src="assets\images\banner\karapuzha.jpeg"
         alt="Chembra Peak"
         class="resort-image"
       />
@@ -534,7 +595,7 @@
     </div>
      <div class="resort-card">
       <img
-        src="assets\images\banner\soochipara-waterfalls-wayanad.webp"
+        src="assets\images\banner\soochipara.jpeg"
         alt="Chembra Peak"
         class="resort-image"
       />
@@ -574,6 +635,24 @@
                 <a class="theme-btn">Find Now</a>
               </div>
             </div> -->
+              <!-- <section
+        class="deals-section"
+        style="background-image: url(assets\images\banner\resort.jpg)"
+      >
+        <div class="auto-container">
+          <div class="content_block_2">
+            <div class="content-box">
+              <h3>Reconnect with Nature<br />at Wayanad's Finest Resorts</h3>
+              <p>
+                Escape to Wayanad’s misty hills and handpicked stays — where
+                nature meets comfort.
+              </p>
+              <a href="" class="theme-btn">Explore Stays</a>
+            </div>
+          </div>
+        </div>
+      </section> -->
+     
   
 <section class="contact-section" style="margin-top: 70px;  background-color: #afd4af; padding: 1px 0;">
   <div class="auto-container">
@@ -625,11 +704,14 @@
   </div>
 </section>
 
+<!-- <section class="map-image">
+  <img src="assets/images/background/map.png" alt="Wayanad Tourist Map" style="width:70%; height: auto; border-radius: 12px;" />
+</section> -->
 
 
 
-      
-      <!-- place-section end -->
+
+
 
 
       <!-- funfact-section -->
@@ -752,7 +834,7 @@
                       <li>
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:hello@journeyjunction.com"
-                          >hello@journeyjunction.com</a
+                          >journeyjunctionwyn@gmail.com</a
                         >
                       </li>
                     </ul>

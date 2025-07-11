@@ -88,6 +88,41 @@
         background: #000;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       } */
+      .resort-card {
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        border-radius: 1rem;
+      }
+
+      .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        z-index: 0;
+        pointer-events: none; /* allows clicking through overlay */
+      }
+
+      .check-out-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #000000;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        z-index: 2;
+        position: relative;
+      }
+
+      .check-out-btn:hover {
+        background-color: #393e3a;
+      }
 
       .resort-card {
         transition: all 0.4s ease;
@@ -233,25 +268,25 @@
           margin-bottom: 1.5rem;
         }
       }
-      .check-out-btn {
+      /* .check-out-btn {
         display: inline-block;
-        background-color: #28a745; /* Bootstrap green */
+        background-color: #020703;
         color: #fff;
         padding: 10px 20px;
         font-weight: 500;
         font-size: 15px;
-        margin-left: 50px;
-        margin-top: 20px;
+        margin-left: 100px;
+        margin-bottom: 20px;
         border: none;
-        border-radius: 8px;
+        border-radius: 40px;
         text-decoration: none;
         transition: all 0.3s ease;
         width: 130px;
         text-align: center;
-      }
+      } */
 
       .check-out-btn:hover {
-        background-color: #218838;
+        background-color: #304033;
         transform: scale(1.05);
         text-decoration: none;
         color: #fff;
@@ -325,14 +360,31 @@
                       <li><a href="index.html">Home</a></li>
                       <li><a href="about.html">About</a></li>
                       <li class="dropdown">
-                  <a href="resorts.html">Resorts</a>
-                  <ul class="submenu">
-                       <li><a href="honeymoon-resorts.html">Honeymoon Resorts</a></li>
-                    <li><a href="luxury-resorts.html">Luxury Resorts</a></li>
-                    <li><a href="privatepoolvillas.html">Private Pool Villas</a></li>
-                    <li><a href="budget-friendly.html">Budget-Friendly</a></li>
-                  </ul>
-                </li>
+                        <a href="resorts.html">Resorts</a>
+                        <ul class="submenu">
+                          <li>
+                            <a href="honeymoon-resorts.html"
+                              >Honeymoon Resorts</a
+                            >
+                          </li>
+                          <li>
+                            <a href="luxury-resorts.html">Luxury Resorts</a>
+                          </li>
+                          <li>
+                            <a href="premium-resorts.html">Premium Resorts</a>
+                          </li>
+                          <li>
+                            <a href="privatepoolvillas.html"
+                              >Private Pool Villas</a
+                            >
+                          </li>
+                          <li>
+                            <a href="budget-friendly-resorts.html"
+                              >Budget-Friendly</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
                       <!-- <li><a href="">Gallery</a></li> -->
                       <li class="dropdown d-block d-lg-none">
                         <a href="booking.html">Book Now</a>
@@ -407,7 +459,7 @@
               <li><a href="tel:+919744161939">Call: +91 97441 61939</a></li>
               <li>
                 <a href="mailto:hello@journeyjunction.com"
-                  >Email: hello@journeyjunction.com</a
+                  >Email: journeyjunctionwyn@gmail.com</a
                 >
               </li>
             </ul>
@@ -452,8 +504,6 @@
 
       <!-- End Page Title -->
 
-      <!-- Top Resorts Section -->
-      <!-- Top Resorts Section -->
       <section class="resorts-section py-5">
         <div class="container">
           <div class="text-center mb-5">
@@ -466,34 +516,10 @@
             </p>
           </div>
 
+          <!-- ✅ First Row (3 Cards) -->
           <div class="row g-4 justify-content-center">
             <!-- Card 1 -->
-            <!-- <div class="col-md-6 mb-5 col-lg-3">
-              <div
-                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
-              >
-                <div class="card-overlay"></div>
-                <div
-                  class="card-body p-4 position-relative z-index-1 text-center"
-                >
-                  <div class="resort-icon mb-3">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                  <h3 class="resort-title">Best Couple Resorts</h3>
-                  <p class="resort-description">
-                    Private cottages, romantic settings, and perfect views for
-                    couples looking to escape the ordinary.
-                  </p>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- Card 2 -->
-            <div class="col-md-6 mb-4 col-lg-3 mb-5 px-3">
-              <!-- <a
-                href="honeymoon-resorts.html"
-                class="text-decoration-none text-dark"
-              > -->
+            <div class="col-md-6 col-lg-4 mb-4">
               <div
                 class="resort-card h-100 overflow-hidden rounded-4 position-relative"
               >
@@ -509,19 +535,15 @@
                     From candle-lit dinners to private pool villas, our
                     handpicked resorts create unforgettable moments.
                   </p>
+                  <a href="honeymoon-resorts.html" class="check-out-btn"
+                    >Check Out</a
+                  >
                 </div>
               </div>
-              <a href="honeymoon-resorts.html" class="check-out-btn"
-                >Check Out</a
-              >
             </div>
 
-            <!-- Card 3 -->
-            <div class="col-md-6 mb-5 col-lg-3">
-              <!-- <a
-                href="luxury-resorts.html"
-                class="text-decoration-none text-dark"
-              > -->
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
               <div
                 class="resort-card h-100 overflow-hidden rounded-4 position-relative"
               >
@@ -537,17 +559,15 @@
                     Stay in style at the top luxury resorts in Wayanad, offering
                     modern amenities in scenic settings.
                   </p>
+                  <a href="luxury-resorts.html" class="check-out-btn"
+                    >Check Out</a
+                  >
                 </div>
               </div>
-              <a href="luxury-resorts.html" class="check-out-btn">Check Out</a>
             </div>
 
-            <!-- Card 4 -->
-            <div class="col-md-6 mb-5 col-lg-3">
-              <!-- <a
-                href="privatepoolvillas.html"
-                class="text-decoration-none text-dark"
-              > -->
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
               <div
                 class="resort-card h-100 overflow-hidden rounded-4 position-relative"
               >
@@ -563,17 +583,18 @@
                     Enjoy a romantic retreat with your own pool and serene views
                     of Wayanad's landscapes.
                   </p>
+                  <a href="privatepoolvillas.html" class="check-out-btn"
+                    >Check Out</a
+                  >
                 </div>
               </div>
-              <a href="privatepoolvillas.html" class="check-out-btn"
-                >Check Out</a
-              >
             </div>
-            <div class="col-md-6 mb-5 col-lg-3">
-              <!-- <a
-                href="budget-friendly-resorts.html"
-                class="text-decoration-none text-dark"
-              > -->
+          </div>
+
+          <!-- ✅ Second Row (2 Cards) -->
+          <div class="row g-4 justify-content-center mt-5 mb-2">
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4 mb-4">
               <div
                 class="resort-card h-100 overflow-hidden rounded-4 position-relative"
               >
@@ -589,15 +610,15 @@
                     Affordable stays in prime locations — great value without
                     compromising on experience.
                   </p>
+                  <a href="budget-friendly-resorts.html" class="check-out-btn"
+                    >Check Out</a
+                  >
                 </div>
               </div>
-              <a href="privatepoolvillas.html" class="check-out-btn"
-                >Check Out</a
-              >
             </div>
 
             <!-- Card 5 -->
-            <!-- <div class="col-md-6 mb-5 col-lg-3">
+            <div class="col-md-6 col-lg-4 mb-4">
               <div
                 class="resort-card h-100 overflow-hidden rounded-4 position-relative"
               >
@@ -608,44 +629,20 @@
                   <div class="resort-icon mb-3">
                     <i class="fas fa-umbrella-beach"></i>
                   </div>
-                  <h3 class="resort-title">Boutique Resorts</h3>
+                  <h3 class="resort-title">Premium Resort</h3>
                   <p class="resort-description">
                     Unique properties with charm, great for couples and families
                     looking for something different.
                   </p>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- Card 6 -->
-
-            <!-- Card 7 -->
-            <!-- <div class="col-md-6 mb-5 col-lg-6">
-              <div
-                class="resort-card h-100 overflow-hidden rounded-4 position-relative"
-              >
-                <div class="card-overlay"></div>
-                <div
-                  class="card-body p-4 position-relative z-index-1 text-center"
-                >
-                  <div class="resort-icon mb-3">
-                    <i class="fas fa-map-marked-alt"></i>
-                  </div>
-                  <h3 class="resort-title">Experiential Stays</h3>
-                  <p class="resort-description">
-                    Resorts offering spice farm visits, adventure trails, forest
-                    treks, and immersive Wayanad experiences.
-                  </p>
+                  <a href="premium-resorts.html" class="check-out-btn"
+                    >Check Out</a
+                  >
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </section>
-
-      <!-- place-section -->
-     
-      <!-- place-section end -->
 
       <footer class="main-footer bg-color-2">
         <div class="footer-top">
