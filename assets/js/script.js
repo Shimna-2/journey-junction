@@ -580,10 +580,11 @@
     const sliderImage = document.getElementById("slider-image");
 
     const imageSources = [
-      "assets/images/banner/imageslider8.jpg",
-      "assets/images/banner/imgslider5.jpg",
-      "assets/images/banner/imageslider4.jpg",
+      "assets/images/banner/WhatsApp Image 2025-07-12 at 16.56.08.jpeg",
+      "assets/images/banner/WhatsApp Image 2025-07-12 at 16.56.09 (1).jpeg",
+      "assets/images/banner/WhatsApp Image 2025-07-12 at 16.56.09.jpeg",
       // "assets/images/banner/imgslider1.jpg",
+
       // "assets/images/banner/imageslider9.jpg",
       // "assets/images/banner/imageslider11.jpg",
     ];

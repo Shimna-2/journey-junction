@@ -9,7 +9,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
 
-    <title>Travio - HTML 5 Template Preview</title>
+    <title>blog</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
@@ -40,14 +40,98 @@
 
   <!-- page wrapper -->
   <body>
+    <header class="main-header style-one">
+  <!-- header-lower -->
+  <div class="header-lower">
+    <div class="auto-container">
+      <div class="outer-box">
+        <!-- Logo -->
+        <div class="logo-box">
+          <figure class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="Journey Junction Logo" />
+            </a>
+          </figure>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="menu-area clearfix">
+          <!--Mobile Navigation Toggler-->
+          <div class="mobile-nav-toggler">
+            <i class="icon-bar"></i>
+            <i class="icon-bar"></i>
+            <i class="icon-bar"></i>
+          </div>
+
+          <nav class="main-menu navbar-expand-md navbar-light">
+            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+              <ul class="navigation clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                  <a href="resorts.html">Resorts</a>
+                  <ul class="submenu">
+                    <li><a href="honeymoon-resorts.html">Honeymoon Resorts</a></li>
+                    <li><a href="luxury-resorts.html">Luxury Resorts</a></li>
+                    <li><a href="premium-resorts.html">Premium Resorts</a></li>
+                    <li><a href="privatepoolvillas.html">Private Pool Villas</a></li>
+                    <li><a href="budget-friendly-resorts.html">Budget-Friendly</a></li>
+                  </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown d-block d-lg-none">
+                  <a href="booking.html">Book Now</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Book Now Button (desktop only) -->
+        <ul class="menu-right-content pull-right clearfix d-none d-lg-flex">
+          <li class="btn-box">
+            <a href="booking.html" class="theme-btn">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <div class="sticky-header">
+    <div class="auto-container">
+      <div class="outer-box">
+        <div class="logo-box">
+          <figure class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="Sticky Logo" />
+            </a>
+          </figure>
+        </div>
+        <div class="menu-area">
+          <nav class="main-menu clearfix">
+            <!-- Menu will be injected via JS (for mobile nav) -->
+          </nav>
+        </div>
+        <ul class="menu-right-content pull-right clearfix">
+          <li class="btn-box">
+            <a href="booking.html" class="theme-btn">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
     <section class="articles-section py-5">
       <div class="container">
         <div class="text-center mb-5">
           <h2 class="section-title">Articles on Wayanad’s Heritage</h2>
-          <p class="section-subtitle text-muted">
+          <!-- <p class="section-subtitle text-muted">
             Dive into stories of culture, tradition, and the timeless spirit of
             Wayanad.
-          </p>
+          </p> -->
         </div>
 
         <div class="row g-4">
@@ -64,12 +148,14 @@
                 Discover the deep-rooted customs of Paniya and Kurichya tribes
                 and how they shaped the identity of Wayanad...
               </p>
-              <a href="tribal-culture.html" class="read-more">Read More →</a>
+              <a href="tribal-culture-essay.html" class="read-more"
+                >Read More →</a
+              >
             </div>
           </div>
 
           <!-- Article 2 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- <div class="col-md-6 col-lg-4">
             <div class="article-card p-4 rounded-4 shadow-sm bg-white h-100">
               <img
                 src="assets/images/blog/festivals.jpg"
@@ -83,22 +169,23 @@
               </p>
               <a href="festivals.html" class="read-more">Read More →</a>
             </div>
-          </div>
+          </div> -->
 
           <!-- Article 3 -->
           <div class="col-md-6 col-lg-4">
             <div class="article-card p-4 rounded-4 shadow-sm bg-white h-100">
               <img
-                src="assets/images/blog/nature-healing.jpg"
+                src="assets\images\background\mountain mist.jpg"
                 alt="Healing Practices"
                 class="img-fluid rounded mb-3"
               />
-              <h4 class="article-title">Traditional Healing & Herbs</h4>
+              <h4 class="article-title">Wayanad Climate</h4>
               <p class="article-snippet">
-                Wayanad’s forests hold secrets to age-old healing practices and
-                medicinal herbs still in use by local Vaidyars...
+                Nestled in the Western Ghats, Wayanad's weather is a dream for
+                nature lovers. Its misty mornings, cool breeze, and lush green
+                landscapes make it a top travel choice throughout the year.
               </p>
-              <a href="healing.html" class="read-more">Read More →</a>
+              <a href="wayanad-climate.html" class="read-more">Read More →</a>
             </div>
           </div>
           <!-- Additional Blogs -->
@@ -107,7 +194,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="article-card p-4 rounded-4 shadow-sm bg-white h-100">
               <img
-                src="assets/images/blog/food.jpg"
+                src="assets\images\background\sadhya.jpeg"
                 alt="Wayanad Cuisine"
                 class="img-fluid rounded mb-3"
               />
@@ -117,12 +204,14 @@
                 jackfruit dishes to tribal cooking techniques passed down
                 through generations...
               </p>
-              <a href="traditional-food.html" class="read-more">Read More →</a>
+              <a href="flavours-of-wayanad.html" class="read-more"
+                >Read More →</a
+              >
             </div>
           </div>
 
           <!-- Article 5 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- <div class="col-md-6 col-lg-4">
             <div class="article-card p-4 rounded-4 shadow-sm bg-white h-100">
               <img
                 src="assets/images/blog/people.jpg"
@@ -136,10 +225,10 @@
               </p>
               <a href="people.html" class="read-more">Read More →</a>
             </div>
-          </div>
+          </div> -->
 
           <!-- Article 6 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- <div class="col-md-6 col-lg-4">
             <div class="article-card p-4 rounded-4 shadow-sm bg-white h-100">
               <img
                 src="assets/images/blog/unique-culture.jpg"
@@ -154,9 +243,136 @@
               </p>
               <a href="unique-culture.html" class="read-more">Read More →</a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
+    
+      <footer class="main-footer bg-color-2">
+        <div class="footer-top">
+          <div
+            class="vector-bg"
+            style="background-image: url(assets/images/shape/shape-11.png)"
+          ></div>
+          <div class="auto-container">
+            <div class="row clearfix">
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget logo-widget">
+                  <figure class="footer-logo">
+                    <a><img src="assets/images/logo.png" alt="" /></a>
+                  </figure>
+                  <div class="text">
+                    <p>
+                      From private pool villas to cozy cottages, Journey
+                      Junction helps you book the top resorts in Wayanad with
+                      ease.
+                    </p>
+                  </div>
+                  <ul class="social-links clearfix">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/journeyjunctionindia"
+                        target="_blank"
+                        ><i class="fab fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/journeyjunction.in"
+                        target="_blank"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li>
+                      <a><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget links-widget">
+                  <div class="widget-title">
+                    <h3>Resorts</h3>
+                  </div>
+                  <div class="widget-content">
+                    <ul class="links-list clearfix">
+                      <li><a>Couple Resorts</a></li>
+                      <li><a>Honeymoon Resorts</a></li>
+                      <li><a>Budget-Friendly Stays</a></li>
+                      <li><a>Experiential Resorts</a></li>
+                      <li><a>Verified local stays</a></li>
+                      <li><a>Quick WhatsApp booking</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget links-widget">
+                  <div class="widget-title">
+                    <h3>Links</h3>
+                  </div>
+                  <div class="widget-content">
+                    <ul class="links-list clearfix">
+                      <li><a>About Us</a></li>
+                      <li><a>Resorts</a></li>
+                      <li><a>Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget contact-widget">
+                  <div class="widget-title">
+                    <h3>Contacts</h3>
+                  </div>
+                  <div class="text mb-3">
+                    <p>
+                      Whether you’re searching for the top resorts in Wayanad or
+                      planning your honeymoon, our team is ready to help.
+                    </p>
+                  </div>
+                  <div class="widget-content">
+                    <ul class="info-list clearfix">
+                      <li>
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/919744161939" target="_blank"
+                          >+91 97441 61939</a
+                        >
+                      </li>
+                      <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919633763916">+91 96337 63916</a>
+                      </li>
+                      <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:hello@journeyjunction.com"
+                          >journeyjunctionwyn@gmail.com</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </footer>
+      <!-- main-footer end -->
+
+      <!--Scroll to top-->
+      <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fal fa-angle-up"></span>
+      </button>
+    </div>
+
+
   </body>
 </html>
